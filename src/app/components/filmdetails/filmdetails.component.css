@@ -1,0 +1,15 @@
+.movie-details {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.movie-details h2 {
+  margin-top: 0;
+}
+
+.movie-details p {
+  margin: 8px 0;
+}

@@ -1,0 +1,21 @@
+<div class="container">
+
+<h2>Shopping Cart</h2>
+
+  <div class="bucket-list">
+    @for (bucket of bucketResponse.bucketList; track bucket.id){
+      <div class="bucket-item">
+    <p><strong>Film Title:</strong> {{ bucket.film.title }}</p>
+    <p><strong>Date Added:</strong> {{ bucket.dateTime | date:'short' }}</p>
+    <p><strong>Quantity:</strong> {{ bucket.qty }}</p>
+    <p><strong>Price:</strong> {{ bucket.price | currency }}</p>
+        <button (click)="delete(bucket.id)">Delete</button>
+      </div>
+    }
+  </div>
+
+  <div class="total-price">
+    <h3>Total Price: {{ bucketResponse.priceAll | currency }}</h3>
+  </div>
+
+</div>
